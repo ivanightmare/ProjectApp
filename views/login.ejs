@@ -1,0 +1,96 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+  
+  <style>   
+Body {  
+  font-family: Calibri;  
+  background-color: #D3D3D3;  
+} 
+ 
+    
+button {   
+       background-color: #808080;   
+        width: 100%;  
+        color: #FFFFFF;   
+        padding: 15px;     
+        border: none;
+        
+         } 
+         
+  
+input[type=email],input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 10px 0;  
+        padding: 10px 0;   
+
+      
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }  
+  .returnbtn {   
+        width: 35%;
+        padding: 12px 18px;  
+        margin: 10px px;
+        margin-left:45px;  
+      
+    }   
+
+    .registerbtn  {   
+        width: auto;
+        padding: 12px 18px;  
+        margin: 10px px; 
+       
+      
+    }   
+             
+ .container {   
+      width: 60%;
+      /* margin-left: 10%;
+      margin-right: 10%; */
+      margin-top: 50px;
+      
+
+  padding: 30px;
+  padding-top: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 200px grey;
+  background: #D3D3D3;
+     
+    }   
+</style>   
+  
+  
+  
+</head>
+<body>
+   <br><br>  
+    <center> <h1> Login  </h1> </center> 
+    <h1 class="text-center mb-3"></h1>
+    <form action="/users/login" method="POST">
+      <div></div>
+       <div class="container" >   
+        <!-- <input type="text" placeholder="Username" name="username" required> -->
+        <input type="email" id="email" placeholder="Email" name="email" >
+        <br><br>  
+        <input type="password" id="password" placeholder="Password" name="password" required>
+        <br><br>  
+         <button type="submit">Login</button>   
+         <br><br>
+        <input type="checkbox" checked="checked"> Remember me   
+        <button onclick="location.href='/'" type="button" class="returnbtn"> Return</button> 
+        <br><br>
+        <text> Don't have an account? </text>
+        <a href="/users/register">Sign Up</a>
+
+      </div>
+    </form>
+    
+</body>
+</html>

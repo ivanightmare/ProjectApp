@@ -1,0 +1,31 @@
+<br><br>
+<nav class="navbar navbar-light bg-light ">
+    <a class="navbar-brand" href="/users/login">Home</a>
+    <a class="navbar-brand" href="#about">Profile</a>
+    <a class="navbar-brand" href="/forms/addForm">Submit forms</a>
+    <a class="navbar-brand" href="/forms">All my forms</a>
+  <a style="float:right" href="/users/logout" class="btn btn-secondary">Logout</a>
+  </nav>
+  <br><br>
+<h3 style="text-align:center">Add Form</h3>
+<div class="card card-body col-sm-5 " style="width:800px; margin:0 auto;">
+    <form action="/forms/addForm" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" class="form-control" placeholder="Enter address">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone No.</label>
+            <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter Phone">
+        </div>
+        <div class="form-group">
+            <label for="details">Details</label>
+            <input type="text" name="details" id="details" class="form-control" placeholder="Enter details">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

@@ -1,0 +1,100 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+  
+  <style>   
+Body {  
+  font-family: Calibri;  
+  background-color: #D3D3D3;  
+} 
+ 
+    
+button {   
+       background-color: #808080;   
+        width: 100%;  
+        color: #FFFFFF;   
+        padding: 15px;     
+        border: none;
+        
+         } 
+         
+  
+input[type=email],input[type=name], input[type=password] {   
+        width: 100%;   
+        margin: 10px 0;  
+        padding: 10px 0;   
+
+      
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }  
+  .returnbtn {   
+        width: 35%;
+        padding: 12px 18px;  
+        margin: 10px px;
+        margin-left:45px;  
+      
+    }   
+
+    .registerbtn  {   
+        width: auto;
+        padding: 12px 18px;  
+        margin: 10px px; 
+       
+      
+    }   
+             
+ .container {   
+      width: 55%;
+      /* margin-left: 10%;
+      margin-right: 10%; */
+      margin-top: 30px;
+      
+
+  padding: 30px;
+  padding-top: 20px;
+  border-radius: 28px;
+  box-shadow: 0px 0px 200px grey;
+  background: #D3D3D3;
+     
+    }   
+</style>   
+  
+  
+  
+</head>
+<body>
+   <br><br>  
+    <center> <h1> Register  </h1> </center> 
+    <h1 class="text-center mb-3"></h1>
+    <form action="/users/register" method="POST">
+      <div></div>
+       <div class="container" >   
+        <!-- <input type="text" placeholder="Username" name="username" required> -->
+        <input type="name" id="name" placeholder="Name" name="name" value="">
+        <br><br>  
+        <input type="email" id="email" placeholder="Email" name="email" required  value="">
+        <br><br>  
+        <input type="password" id="password" placeholder="Password" name="password" required value="">
+        <br><br>  
+        <input type="password" id="password2" placeholder="Confirm Password" name="password2" required value="">
+        <br><br>  
+         <button type="submit">Register</button>   
+         <br><br>
+        <input type="checkbox" checked="checked"> Remember me   
+        <button onclick="location.href='/'" type="button" class="returnbtn"> Return</button> 
+        <br><br>
+        <text> Already a member ?   </text>
+        <a href="/users/login">Log In</a>
+
+      </div>
+    </form>
+    
+</body>
+</html>

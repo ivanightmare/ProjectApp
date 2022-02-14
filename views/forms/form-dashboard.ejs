@@ -1,0 +1,41 @@
+<h1 class="mt-5"> All Submitted Forms</h1>
+<br>
+<nav class="navbar navbar-light bg-light ">
+    <a class="navbar-brand" href="/users/login">Home</a>
+    <a class="navbar-brand" href="/users/profile">Profile</a>
+    <a class="navbar-brand" href="/forms">All my forms</a>
+  <a style="float:right" href="/users/logout" class="btn btn-secondary">Logout</a>
+  </nav>
+  <br>
+<table class="table table-striped"  style="background-color:white;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Details</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% var i=1; forms.forEach(function (form, index) { %>
+            <tr>
+                <td><%= index+1 %></td>
+                <td><%= form.name %></td>
+                <td><%= form.address %></td>
+                <td><%= form.phone %></td>
+                <td><%= form.details %></td>
+                <td><%= form.date %></td>
+                <td><%= form.action %></td>
+                <td>
+                    <a href="/forms/editForm/<%= form.id %>" class="btn btn-danger">Edit</a>
+                    <a href="/forms/delete/<%= form.id %>" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+<a href="/forms/addform" class="btn btn-danger">Submit a new Form</a>

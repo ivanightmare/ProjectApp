@@ -1,0 +1,54 @@
+
+<h1 class="mt-5"> Admin Dashboard</h1>
+<br>
+<div >
+    <nav class="navbar navbar-light bg-light ">
+      <a class="navbar-brand" href="/">Profile</a>
+      <a class="navbar-brand" href="#about">Check Reguest</a>
+      <a class="navbar-brand" href="#forms">locate</a>
+      <a class="navbar-brand" href="#allforms">Volunteer</a>
+    <a style="float:right" href="/users/logout" class="btn btn-secondary">Logout</a>
+    </nav>
+  </div>
+  <br>
+    <table class="table table-striped"  style="background-color:white;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Created At</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach(function (user) { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.role %></td>
+                    <td><%= user.date %></td>
+            
+                    <td>
+                        <a href="/users/edit1/<%= user.id %>" class="btn btn-primary">Edit</a>
+                        <a href="/users/delete/<%= user.id %>" class="btn btn-danger">Delete</a>
+                        <a href="/users/setuser/<%= user.id %>" class="btn btn-dark">User</a>
+                        <a href="/users/setadmin/<%= user.id %>" class="btn btn-primary">Admin</a>
+                        <a href="/users/setstaff/<%= user.id %>" class="btn btn-success">Staff</a>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <!-- <a href="/user/create" class="btn btn-primary">Create</a> -->
+    
+
+</div>
+
+
+
+
+
+
